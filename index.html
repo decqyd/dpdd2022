@@ -10,6 +10,8 @@
   <meta name="viewport" content="width=device-width">
   <title>awesome website init</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src ="L.Control.MousePosition.js"></script>
+  <link rel = "stylesheet" href = "L.Control.MousePosition.css" />
 </head>
 
 <body>
@@ -28,8 +30,11 @@
 
     L.marker([51.5, -0.09]).addTo(map)
       .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-      .openPopup();</script>
-
+      .openPopup(); 
+    L.control.mousePosition().addTo(map)
+    
+    </script>
+ 
 </body>
 
 </html>
