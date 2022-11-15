@@ -32,10 +32,10 @@
       .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
       .openPopup(); 
     L.control.mousePosition().addTo(map);
-     map.on('click', function(){
-      var popup = L.popup();
-      popup.setLatLng(e.latlng) .setContent("You clicked the map at " + e.latlng.toString()).openOn(map);
-     });
+    // allow user to place a marker anywhere on the map
+    map.on('click', function(e) {
+      var marker = L.marker(e.latlng).addTo(map);
+    });
 
     
     </script>
